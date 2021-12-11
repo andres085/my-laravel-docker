@@ -16,13 +16,13 @@ cd my-laravel-docker
 ```
 Ejecutar el script start.sh dentro de la carpeta bin para descargar Laravel y realizar una copia del archivo de ejemplo para variables de entorno para Docker y Laravel
 ```
-chmod +x ./start.sh
+chmod +x ./bin/start.sh
 
 ./start.sh
 ```
 Ejecutar el segundo script first-start.sh dentro de bin para instalar las dependencias de Laravel y cambiar los permisos
 ```
-chmod +x ./first-start.sh
+chmod +x ./bin/first-start.sh
 
 ./first-start.sh
 ```
