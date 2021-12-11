@@ -1,7 +1,7 @@
 #!/bin/bash
-mysql_password=user_password_example
-mysql_db=db_name_example
-mysql_user=user_name_example
+mysql_password=userpassword
+mysql_db=db_test
+mysql_user=usertest
 mysql_port=3306
 backup_dir="/opt/mysql/backup"
 
