@@ -20,12 +20,6 @@ chmod +x ./bin/start.sh
 
 ./bin/start.sh
 ```
-Ejecutar el segundo script first-start.sh dentro de bin para instalar las dependencias de Laravel y cambiar los permisos
-```
-chmod +x ./bin/first-start.sh
-
-./bin/first-start.sh
-```
 Revisar el archivo .env y declarar las variables a gusto personal, tanto dentro de la carpeta raíz para Docker, asi como dentro de src/ para Laravel
 
 ### Levantar ambiente con docker-compose
@@ -36,6 +30,15 @@ docker-compose build
 # up daemon
 docker-compose up -d
 ```
+
+Ejecutar el segundo script first-start.sh dentro de bin para instalar las dependencias de Laravel y cambiar los permisos
+```
+chmod +x ./bin/first-start.sh
+
+./bin/first-start.sh
+```
+
+## Para Producción
 
 Si quiere usar un docker-compose para produccion, editar el archivo docker-composeprod.yml a docker-compose.yml para disponer tambien de un cron para respaldar la base de datos, por defecto viene configurado para que respalde cada un minuto. En caso de querer modificar el tiempo, se debe hacer en el archivo crontab.conf dentro del directorio cron, y en el archivo script.sh se deben copiar las credenciales de mysql tal cual figuran en el archivo .env. Los respaldos a la base de datos son guardados dentro de backup/mysql
 
