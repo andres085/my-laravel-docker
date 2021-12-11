@@ -18,13 +18,13 @@ Ejecutar el script start.sh dentro de la carpeta bin para descargar Laravel y re
 ```
 chmod +x ./bin/start.sh
 
-./start.sh
+./bin/start.sh
 ```
 Ejecutar el segundo script first-start.sh dentro de bin para instalar las dependencias de Laravel y cambiar los permisos
 ```
 chmod +x ./bin/first-start.sh
 
-./first-start.sh
+./bin/first-start.sh
 ```
 Revisar el archivo .env y declarar las variables a gusto personal, tanto dentro de la carpeta raíz para Docker, asi como dentro de src/ para Laravel
 
