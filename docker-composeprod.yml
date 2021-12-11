@@ -69,3 +69,20 @@ services:
       - db
     networks:
       - laravel
+
+  cron_mysql:
+    build:
+      context: ./cron
+      dockerfile: Dockerfile
+    container_name: cron_mysql
+    restart: unless-stopped
+    user: root
+    tty: true
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./mysql/data:/var/lib/mysql
+      - ./backup/mysql:/opt/mysql/backup
+    depends_on:
+      - db
+    networks:
+      - laravel
