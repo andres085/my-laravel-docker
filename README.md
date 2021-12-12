@@ -1,5 +1,8 @@
 # Trabajo Final Curso Docker de Martinez Andrés Fernando
 
+### Breve descripción.
+El trabajo final consiste en un contenedor de Docker para poder trabajar con Laravel, cuenta con los servicios necesarios de mysql, phpmyadmin y nginx, para poder trabajar con este framework, ademas se pone a disposición de un archivo compose para producción con un servicio de cron configurable para poder realizar backups a la base de datos segun el tiempo que el usuario requiera.
+
 ### Obtener proyecto para comenzar.
 Puede obtener el proyecto usando el comando:
 ```
@@ -40,7 +43,7 @@ chmod +x ./bin/first-start.sh
 
 ## Para Producción
 
-Si quiere usar un docker-compose para produccion, editar el archivo docker-composeprod.yml a docker-compose.yml para disponer tambien de un cron para respaldar la base de datos, por defecto viene configurado para que respalde cada un minuto. En caso de querer modificar el tiempo, se debe hacer en el archivo crontab.conf dentro del directorio cron, y en el archivo script.sh se deben copiar las credenciales de mysql tal cual figuran en el archivo .env. Los respaldos a la base de datos son guardados dentro de backup/mysql
+Si quiere usar un docker-compose para produccin, editar el archivo docker-composeprod.yml a docker-compose.yml para disponer tambien de un cron para respaldar la base de datos, por defecto viene configurado para que respalde cada un minuto. En caso de querer modificar el tiempo, se debe hacer en el archivo crontab.conf dentro del directorio cron, y en el archivo script.sh se deben copiar las credenciales de mysql tal cual figuran en el archivo .env. Los respaldos a la base de datos son guardados dentro de backup/mysql
 
 ```
 # construir imagen (opcional)
