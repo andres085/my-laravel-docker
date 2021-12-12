@@ -1,9 +1,7 @@
-cd ..
-
 composer create-project laravel/laravel src
 
 cp .env.example .env
 
-cd /src
+cd src/
 
 cp .env.example .env
